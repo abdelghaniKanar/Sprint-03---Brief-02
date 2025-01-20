@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .section2 {
+        height: fit-content;
+      }
+      .section2 .container {
+        display: inline-block;
+      }
+
+      /* Services Section */
+      .services-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 100px;
+      }
+
+      .service-content {
+        padding-right: 40px;
+      }
+
+      .service-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        line-height: 1;
+      }
+
+      .service-title.outline {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      .service-description {
+        color: #ffffffcc;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .service-image {
+        border: 2px dashed #ffffff40;
+        padding: 20px;
+        aspect-ratio: 1;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .offers-link {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        margin-bottom: 100px;
+        width: 100%;
+      }
+
+      .pricing-title {
+        font-size: 42px;
+        margin-bottom: 60px;
+      }
+
+      .service-categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .category-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      .pricing-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .pricing-card {
+        border: 2px dashed #ffffff40;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .pricing-card:hover {
+        border-color: white;
+      }
+
+      .plan-type {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .plan-name {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .plan-subtitle {
+        font-size: 16px;
+        color: #ffffffcc;
+        margin-bottom: 20px;
+      }
+
+      .features-list {
+        list-style: none;
+        margin-bottom: 30px;
+      }
+
+      .features-list li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .features-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+      }
+
+      .plan-description {
+        color: #ffffff80;
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+
+      .price {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .deal-button {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .deal-button a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+      }
+
+      /* Footer Section */
+      .footer {
+        padding: 60px 0;
+        border-top: 1px solid #ffffff20;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      .contact-button {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      .footer-info {
+        text-align: right;
+      }
+
+      .footer-info p {
+        margin-bottom: 10px;
+        color: #ffffffcc;
+      }
+
+      .footer-info a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .copyright {
+        text-align: center;
+        color: #ffffff80;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    </style>
+    <!-- Add GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Select all team member cards
+        const cards = document.querySelectorAll(".pricing-card");
+
+        // Add hover animations to each card
+        cards.forEach((card) => {
+          // Mouse enter animation
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              scale: 1.02,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          // Mouse leave animation
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        });
+      });
+    </script>
+    <title>Services</title>
+  </head>
+  <body>
+    <section class="section1 header">
+      <video autoplay muted loop>
+        <source src="assets/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+        <div class="nav-bar">
+          <div class="logo"><a href="index.html">404.JS</a></div>
+          <div class="links">
+            <ul>
+              <li><a href="a-propos-nous.html">A propos nous</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contactez-nous.html">Contactez nous</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="headerContent">
+          <div class="subContent">
+            <div class="title">
+              <h1>Ce que nous pouvons accomplir</h1>
+            </div>
+            <div class="text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+                quidem ipsa nihil fuga sapiente quasi dignissimos?
+                Exercitationem voluptatum cum odit quos, aliquam ipsum nam
+                doloremque reprehenderit, architecto fugit quidem voluptates.
+              </p>
+            </div>
+            <div class="btn">
+              <a href="#a-propos-nous" class="link-section">En savoir plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="container">
+        <!-- Web Development Section -->
+        <div class="services-section">
+          <div class="service-content">
+            <h2 class="service-title">web<br />development</h2>
+            <p class="service-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio neque voluptatibus dolor.Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+            </p>
+            <p class="service-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio. elit. Debitis magnam odio.
+            </p>
+            <a href="#" class="offers-link">offres</a>
+          </div>
+          <div class="service-image">
+            <img src="/assets/web.png" alt="Web Development" />
+          </div>
+        </div>
+
+        <!-- Digital Marketing Section -->
+        <div class="services-section">
+          <div class="service-image">
+            <img src="/assets/digital.png" alt="Digital Marketing" />
+          </div>
+          <div class="service-content">
+            <h2 class="service-title">Digital<br />marketing</h2>
+            <p class="service-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio neque voluptatibus dolor.Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+            </p>
+            <p class="service-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio. elit. Debitis magnam odio.
+            </p>
+            <a href="#" class="offers-link">offres</a>
+          </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing-section">
+          <h2 class="pricing-title">
+            Des offres conçues<br />pour répondre à vos<br />besoins.
+          </h2>
+
+          <div class="service-categories">
+            <!-- Web Development Pricing -->
+            <div>
+              <h3 class="category-title">Web development</h3>
+              <div class="pricing-cards">
+                <div class="pricing-card">
+                  <p class="plan-type">Basique</p>
+                  <h4 class="plan-name">Forfait</h4>
+                  <p class="plan-subtitle">Design Web Starter</p>
+                  <ul class="features-list">
+                    <li>Jusqu'à 5 pages</li>
+                    <li>Design adapté aux mobiles</li>
+                    <li>Livraison : 7 jours ouvrables</li>
+                    <li>Une seule série de révisions</li>
+                  </ul>
+                  <p class="plan-description">
+                    Idéal pour les petites entreprises et les projets simples.
+                  </p>
+                  <p class="price">Seulement : 499 MAD</p>
+                </div>
+                <div class="pricing-card">
+                  <p class="plan-type">Premium</p>
+                  <h4 class="plan-name">Forfait</h4>
+                  <p class="plan-subtitle">Solution Web Avancée</p>
+                  <ul class="features-list">
+                    <li>Jusqu'à 10 pages</li>
+                    <li>Design personnalisé adapté à votre marque</li>
+                    <li>Design responsive pour tous les appareils</li>
+                    <li>Fonctionnalité e-commerce</li>
+                  </ul>
+                  <p class="plan-description">
+                    Conçu pour développer votre présence en ligne de manière
+                    professionnelle
+                  </p>
+                  <p class="price">Seulement : 999 MAD</p>
+                </div>
+              </div>
+              <div class="deal-button">
+                <a href="#">Fixez le deal</a>
+              </div>
+            </div>
+
+            <!-- Digital Marketing Pricing -->
+            <div>
+              <h3 class="category-title">Digital marketing</h3>
+              <div class="pricing-cards">
+                <div class="pricing-card">
+                  <p class="plan-type">Basique</p>
+                  <h4 class="plan-name">Forfait</h4>
+                  <p class="plan-subtitle">Boostez Votre Présence</p>
+                  <ul class="features-list">
+                    <li>Gestion des 2 Rs</li>
+                    <li>5 publications par semaine</li>
+                    <li>Planification de contenu mensuel</li>
+                    <li>Assistance par e-mail</li>
+                  </ul>
+                  <p class="plan-description">
+                    Un bon point de départ pour les petites entreprises
+                  </p>
+                  <p class="price">Seulement : 399 MAD</p>
+                </div>
+                <div class="pricing-card">
+                  <p class="plan-type">Premium</p>
+                  <h4 class="plan-name">Forfait</h4>
+                  <p class="plan-subtitle">Stratégie de Croissance</p>
+                  <ul class="features-list">
+                    <li>Gestion des 4 Rs</li>
+                    <li>10 publications par semaine</li>
+                    <li>Création de campagnes publicitaires</li>
+                    <li>Consultation stratégique mensuel</li>
+                  </ul>
+                  <p class="plan-description">
+                    Une solution complète pour optimiser votre présence digitale
+                  </p>
+                  <p class="price">Seulement : 899 MAD</p>
+                </div>
+              </div>
+              <div class="deal-button">
+                <a href="#">Fixez le deal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+          <div class="footer-content">
+            <div>
+              <h2 class="footer-title">Collaborez<br />avec nous</h2>
+              <a href="#" class="contact-button">contactez nous</a>
+            </div>
+            <div class="footer-info">
+              <p>
+                Nos réseaux sociaux : <a href="#">instagram</a>
+                <a href="#">linkedin</a>
+              </p>
+              <p>Notre ligne téléphonique fixe : 0523-456789</p>
+              <p>Adresse e-mail : contactez-nous@404js.com</p>
+              <p>Adresse : 123 Avenue, Casablanca, Maroc</p>
+            </div>
+          </div>
+          <p class="copyright">© 2025 404.JS. Tous droits réservés.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -60,7 +60,8 @@ section {
 
 }
 
-.section1 .container .nav-bar {
+.section1 .container .nav-bar,
+.section2 .container .nav-bar {
 
     /* background-color: #cb13a0; */
     width: 100%;
@@ -71,7 +72,8 @@ section {
 
 }
 
-.section1 .container .nav-bar .logo {
+.section1 .container .nav-bar .logo,
+.section2 .container .nav-bar .logo {
     /* background-color: #08879e; */
     width: 20%;
     height: 100%;
@@ -79,7 +81,8 @@ section {
     align-items: center;
 }
 
-.section1 .container .nav-bar .links {
+.section1 .container .nav-bar .links,
+.section2 .container .nav-bar .links {
     /* background-color: #9e9208; */
     width: 80%;
     height: 100%;
@@ -88,12 +91,14 @@ section {
     justify-content: flex-end;
 }
 
-.section1 .container .nav-bar .links ul {
+.section1 .container .nav-bar .links ul,
+.section2 .container .nav-bar .links ul {
     display: flex;
     list-style: none;
 }
 
-.section1 .container .nav-bar .links ul li {
+.section1 .container .nav-bar .links ul li,
+.section2 .container .nav-bar .links ul li {
     margin-left: 2rem;
 }
 
@@ -191,6 +196,7 @@ section {
     height: 100%;
     display: flex;
     align-items: center;
+
 }
 
 .section2 .container .image img {
@@ -260,6 +266,10 @@ section {
     align-items: center;
 }
 
+.section3 .container .services .service {
+    margin: 1rem;
+}
+
 .section3 .container .services .service1 {
     background-color: #1A1A1A;
     width: 45%;
@@ -317,6 +327,7 @@ section {
 .section4 .container .copyright {
     /* background-color: rgb(156, 100, 100); */
     width: 100%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;

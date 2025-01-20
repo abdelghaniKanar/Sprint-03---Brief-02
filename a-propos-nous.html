@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .section2 {
+        height: fit-content;
+      }
+
+      .section2 .container {
+        display: inline-block;
+      }
+
+      /* Team Section */
+      .team-section {
+        margin-bottom: 100px;
+      }
+
+      .section-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 60px;
+        line-height: 1.2;
+      }
+
+      .section-title.outline {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      /* .team-member {
+        border: 2px dashed #ffffff40;
+        padding: 30px;
+        border-radius: 10px;
+      } */
+
+      .team-member {
+        border: 2px dashed #ffffff40;
+        padding: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+
+      .team-member:hover {
+        border-color: white;
+      }
+
+      .member-image {
+        width: 100%;
+        aspect-ratio: 1;
+        border: 2px dashed #ffffff40;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      .member-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .member-name {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .member-role {
+        font-size: 16px;
+        color: #ffffffcc;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffffff40;
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+
+      .member-bio {
+        color: #ffffffcc;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      /* Vision Section */
+      .vision-section {
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .vision-content {
+        padding-right: 40px;
+      }
+
+      .vision-description {
+        color: #ffffffcc;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .vision-image {
+        border: 2px dashed #ffffff40;
+        padding: 20px;
+        aspect-ratio: 1;
+      }
+
+      .vision-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .value-item {
+        border: 2px dashed #ffffff40;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .value-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .value-description {
+        color: #ffffffcc;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      /* Footer Section */
+      .footer {
+        padding: 60px 0;
+        border-top: 1px solid #ffffff20;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+
+      .contact-button {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      .footer-info {
+        text-align: right;
+      }
+
+      .footer-info p {
+        margin-bottom: 10px;
+        color: #ffffffcc;
+      }
+
+      .footer-info a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .copyright {
+        text-align: center;
+        color: #ffffff80;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+    </style>
+
+    <!-- Add GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Select all team member cards
+        const cards = document.querySelectorAll(".team-member");
+
+        // Add hover animations to each card
+        cards.forEach((card) => {
+          // Mouse enter animation
+          card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+              scale: 1.02,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+
+          // Mouse leave animation
+          card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+              scale: 1,
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          });
+        });
+      });
+    </script>
+    <title>A propos nous</title>
+  </head>
+
+  <body>
+    <section class="section1 header">
+      <video autoplay muted loop>
+        <source src="assets/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+        <div class="nav-bar">
+          <div class="logo"><a href="index.html">404.JS</a></div>
+          <div class="links">
+            <ul>
+              <li><a href="a-propos-nous.html">A propos nous</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contactez-nous.html">Contactez nous</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="headerContent">
+          <div class="subContent">
+            <div class="title">
+              <h1>comment nous sommes?</h1>
+            </div>
+            <div class="text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+                quidem ipsa nihil fuga sapiente quasi dignissimos?
+                Exercitationem voluptatum cum odit quos, aliquam ipsum nam
+                doloremque reprehenderit, architecto fugit quidem voluptates.
+              </p>
+            </div>
+            <div class="btn">
+              <a href="#a-propos-nous" class="link-section"
+                >Pour plus de détails</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section2" id="a-propos-nous">
+      <div class="container">
+        <!-- Team Section -->
+        <div class="team-section">
+          <h2 class="section-title">Notre<br />équipe</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-image">
+                <img src="/assets/men.jpeg" alt="Team Member 1" />
+              </div>
+              <h3 class="member-name">Abderahim</h3>
+              <p class="member-role">Directrice Créative & ead Développeur</p>
+              <p class="member-bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                magnam odio neque voluptatibus dolor. Expert en design et
+                expérience utilisateur.
+              </p>
+            </div>
+            <div class="team-member">
+              <div class="member-image">
+                <img src="/assets/men.jpeg" alt="Team Member 1" />
+              </div>
+              <h3 class="member-name">kanar</h3>
+              <p class="member-role">Directrice Créative</p>
+              <p class="member-bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                magnam odio neque voluptatibus dolor. Expert en design et
+                expérience utilisateur.
+              </p>
+            </div>
+            <div class="team-member">
+              <div class="member-image">
+                <img src="/assets/woman.png" alt="Team Member 2" />
+              </div>
+              <h3 class="member-name">manal</h3>
+              <p class="member-role">Lead Développeur</p>
+              <p class="member-bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                magnam odio neque voluptatibus dolor. Passionné par les
+                technologies web innovantes.
+              </p>
+            </div>
+            <div class="team-member">
+              <div class="member-image">
+                <img src="/assets/woman.png" alt="Team Member 3" />
+              </div>
+              <h3 class="member-name">hossna</h3>
+              <p class="member-role">Marketing Manager</p>
+              <p class="member-bio">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                magnam odio neque voluptatibus dolor. Spécialiste en stratégie
+                digitale.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="vision-section">
+          <div class="vision-content">
+            <h2 class="section-title outline">Vision et<br />valeurs</h2>
+            <p class="vision-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio neque voluptatibus dolor. Notre vision est de créer un
+              impact positif à travers l'innovation digitale.
+            </p>
+            <p class="vision-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              magnam odio neque voluptatibus dolor.
+            </p>
+
+            <div class="values-grid">
+              <div class="value-item">
+                <h4 class="value-title">Innovation</h4>
+                <p class="value-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis magnam odio.
+                </p>
+              </div>
+              <div class="value-item">
+                <h4 class="value-title">Excellence</h4>
+                <p class="value-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis magnam odio.
+                </p>
+              </div>
+              <div class="value-item">
+                <h4 class="value-title">Collaboration</h4>
+                <p class="value-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis magnam odio.
+                </p>
+              </div>
+              <div class="value-item">
+                <h4 class="value-title">Intégrité</h4>
+                <p class="value-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis magnam odio.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="vision-image">
+            <img src="/assets/illustration.png" alt="Vision Illustration" />
+          </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+          <div class="footer-content">
+            <div>
+              <h2 class="footer-title">Collaborez<br />avec nous</h2>
+              <a href="#" class="contact-button">contactez nous</a>
+            </div>
+            <div class="footer-info">
+              <p>
+                Nos réseaux sociaux : <a href="#">instagram</a>
+                <a href="#">linkedin</a>
+              </p>
+              <p>Notre ligne téléphonique fixe : 0523-456789</p>
+              <p>Adresse e-mail : contactez-nous@404js.com</p>
+              <p>Adresse : 123 Avenue, Casablanca, Maroc</p>
+            </div>
+          </div>
+          <p class="copyright">© 2025 404.JS. Tous droits réservés.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
